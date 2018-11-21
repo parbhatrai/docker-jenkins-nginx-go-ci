@@ -1,0 +1,86 @@
+Started by user [8mha:////4Kq1zbbgNMLpWG1pfz+aANNMgQA3Geqbk/p0B8NNOUjfAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/jenkins_home/jobs/docker-jenkins-nginx-go-ci/workspace
+Cloning the remote Git repository
+Cloning repository https://github.com/parbhatrai/docker-go-http-server.git
+ > git init /var/jenkins_home/jobs/docker-jenkins-nginx-go-ci/workspace # timeout=10
+Fetching upstream changes from https://github.com/parbhatrai/docker-go-http-server.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/parbhatrai/docker-go-http-server.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/parbhatrai/docker-go-http-server.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/parbhatrai/docker-go-http-server.git # timeout=10
+Fetching upstream changes from https://github.com/parbhatrai/docker-go-http-server.git
+ > git fetch --tags --progress https://github.com/parbhatrai/docker-go-http-server.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision e63c5cd48bea92b3b3622be8d4d1ec1b833a92c1 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f e63c5cd48bea92b3b3622be8d4d1ec1b833a92c1
+Commit message: "first commit"
+First time build. Skipping changelog.
+[workspace] $ /bin/bash /tmp/jenkins2751111470503626769.sh
+Sending build context to Docker daemon   8.75MB
+Step 1/5 : FROM python
+Trying to pull repository docker.io/library/python ... 
+latest: Pulling from docker.io/library/python
+54f7e8ac135a: Pulling fs layer
+d6341e30912f: Pulling fs layer
+087a57faf949: Pulling fs layer
+5d71636fb824: Pulling fs layer
+0c1db9598990: Pulling fs layer
+bfb904e99f24: Pulling fs layer
+78a3d3a96a32: Pulling fs layer
+885a0ed92c89: Pulling fs layer
+dd7cc9ace242: Pulling fs layer
+5d71636fb824: Waiting
+0c1db9598990: Waiting
+bfb904e99f24: Waiting
+78a3d3a96a32: Waiting
+885a0ed92c89: Waiting
+dd7cc9ace242: Waiting
+087a57faf949: Verifying Checksum
+087a57faf949: Download complete
+d6341e30912f: Verifying Checksum
+d6341e30912f: Download complete
+54f7e8ac135a: Verifying Checksum
+54f7e8ac135a: Download complete
+5d71636fb824: Verifying Checksum
+5d71636fb824: Download complete
+bfb904e99f24: Verifying Checksum
+bfb904e99f24: Download complete
+885a0ed92c89: Verifying Checksum
+885a0ed92c89: Download complete
+78a3d3a96a32: Verifying Checksum
+78a3d3a96a32: Download complete
+dd7cc9ace242: Verifying Checksum
+dd7cc9ace242: Download complete
+0c1db9598990: Verifying Checksum
+0c1db9598990: Download complete
+54f7e8ac135a: Pull complete
+d6341e30912f: Pull complete
+087a57faf949: Pull complete
+5d71636fb824: Pull complete
+0c1db9598990: Pull complete
+bfb904e99f24: Pull complete
+78a3d3a96a32: Pull complete
+885a0ed92c89: Pull complete
+dd7cc9ace242: Pull complete
+Digest: sha256:3870d35b962a943df72d948580fc66ceaaee1c4fbd205930f32e0f0760eb1077
+Status: Downloaded newer image for docker.io/python:latest
+ ---> 1e80caffd59e
+Step 2/5 : COPY app /opt/go-staticsite/app
+ ---> ab1755b37ce7
+Removing intermediate container eda08ccbdfa7
+Step 3/5 : COPY static /opt/go-staticsite/static
+ ---> a65a7b9e6e49
+Removing intermediate container 23b46c635902
+Step 4/5 : WORKDIR /opt/go-staticsite
+ ---> 820756d1a7aa
+Removing intermediate container d32a6b6309d6
+Step 5/5 : ENTRYPOINT /opt/go-staticsite/app
+ ---> Running in 7d096fb89f74
+ ---> 10f87dac5348
+Removing intermediate container 7d096fb89f74
+Successfully built 10f87dac5348
+da83f9e2a35fb10aa9c02c9e63436a50b0413e5d7ebedb14803e93edf66ef233
+Finished: SUCCESS
